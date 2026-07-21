@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>My Bookings</title>
+</head>
+<body>
+    <h1>My Bookings</h1>
+
+    <p><a href="{{ url_for('home') }}">Back to Flights</a> | <a href="{{ url_for('logout') }}">Logout</a></p>
+
+    {% if flights %}
+        <ul>
+            {% for flight in flights %}
+                <li>{{ flight.airline }} — {{ flight.origin }} to {{ flight.destination }} — ${{ flight.price }}</li>
+            {% endfor %}
+        </ul>
+    {% else %}
+        <p>You haven't booked any flights yet.</p>
+    {% endif %}
+</body>
+</html>
