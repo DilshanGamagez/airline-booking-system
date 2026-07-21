@@ -14,6 +14,9 @@ A secure flight booking web application built with Flask, demonstrating core web
 - **Database:** SQLite with Flask-SQLAlchemy (ORM)
 - **Auth:** Flask-Login, Werkzeug password hashing
 - **Frontend:** HTML, Jinja2 templating
+- **Containerization:** Docker
+- **Cloud:** Azure (planned)
+- **Infrastructure as Code:** Terraform (planned)
 
 ## Security Practices Implemented
 - Passwords are never stored in plain text — hashed using Werkzeug's `generate_password_hash`
@@ -21,10 +24,10 @@ A secure flight booking web application built with Flask, demonstrating core web
 - Session management handled securely via Flask-Login
 
 ## Project Status
-In development — currently a local Flask app. Planned next steps:
-- Containerize with Docker
-- Deploy to AWS using Terraform
-- Add AWS security layer: IAM least-privilege roles, Secrets Manager, WAF, GuardDuty, CloudTrail
+In development — currently a containerized Flask app, ready for cloud deployment. Planned next steps:
+- Containerized with Docker
+- Deploy to Azure using Terraform
+- Add Azure security layer: Entra ID (RBAC), Key Vault, Web Application Firewall, Microsoft Defender for Cloud, Azure Monitor
 - Set up CI/CD pipeline with GitHub Actions
 
 ## Running Locally
